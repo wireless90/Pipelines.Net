@@ -4,4 +4,9 @@
     {
         Output Execute(Input input);
     }
+
+    public interface IFilter<InOutput> : IFilter<InOutput, InOutput>
+    {
+
+    }
 }

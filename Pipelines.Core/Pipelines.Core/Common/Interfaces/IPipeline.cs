@@ -6,4 +6,9 @@
 
         IPipeline<Input, Output> Register<FIn, FOut>(IFilter<FIn, FOut> filter);
     }
+
+    public interface IPipeline<InOutput> : IPipeline<InOutput, InOutput>
+    {
+
+    }
 }

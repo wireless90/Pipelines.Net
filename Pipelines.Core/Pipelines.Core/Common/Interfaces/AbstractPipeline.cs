@@ -23,6 +23,16 @@ namespace Pipelines.Core.Common.Interfaces
             return (Output)objInput;
         }
 
-        public abstract IPipeline<Input, Output> Register<FIn, FOut>(IFilter<FIn, FOut> filter);
+        public virtual IPipeline<Input, Output> Register<FIn, FOut>(IFilter<FIn, FOut> filter)
+        {
+            _filters.Add(filter);
+
+            return this;
+        }
     }
+    
+    public abstract class AbstractPipeline<InOutput> : AbstractPipeline<InOutput, InOutput>, IPipeline<InOutput>
+    {
+
+    }    
 }

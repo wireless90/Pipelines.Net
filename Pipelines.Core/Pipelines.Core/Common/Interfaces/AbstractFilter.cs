@@ -17,4 +17,9 @@ namespace Pipelines.Core.Common.Interfaces
 
         public abstract Output Process(Input input);
     }
+
+    public abstract class AbstractFilter<InOutPut> : AbstractFilter<InOutPut, InOutPut>, IFilter<InOutPut>
+    {
+
+    }
 }
