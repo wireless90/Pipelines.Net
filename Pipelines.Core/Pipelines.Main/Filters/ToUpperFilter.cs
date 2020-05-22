@@ -1,5 +1,6 @@
 ﻿using Pipelines.Core.Common.Interfaces;
 using System;
+using System.Threading;
 
 namespace Pipelines.Main.Filters
 {
@@ -7,6 +8,8 @@ namespace Pipelines.Main.Filters
     {
         public override string Process(string input)
         {
+            Thread.Sleep(100);
+
             return input.ToUpper();
         }
     }

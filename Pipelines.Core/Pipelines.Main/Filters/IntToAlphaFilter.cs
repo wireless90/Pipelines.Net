@@ -1,6 +1,7 @@
 ﻿using Pipelines.Core.Common.Interfaces;
 using System;
 using System.Text;
+using System.Threading;
 
 namespace Pipelines.Main.Filters
 {
@@ -14,6 +15,7 @@ namespace Pipelines.Main.Filters
         }
         public override string Process(string input)
         {
+            Thread.Sleep(100);
             _stringBuilder.Clear();
             foreach (char character in input)
             {

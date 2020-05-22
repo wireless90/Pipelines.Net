@@ -1,5 +1,6 @@
 ﻿using Pipelines.Core.Common.Interfaces.Parallel;
 using System.Text;
+using System.Threading;
 
 namespace Pipelines.Main.Filters
 {
@@ -7,6 +8,7 @@ namespace Pipelines.Main.Filters
     {
         public override string Process(string input)
         {
+            Thread.Sleep(100);
             StringBuilder _stringBuilder = new StringBuilder();
 
             foreach (char character in input)
