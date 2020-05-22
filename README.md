@@ -9,7 +9,7 @@ IPipeline<String, String> employeePipeline = new EmployeePipeline()
                 .Register(new ToUpperFilter());
 ```
 
-##Usage
+## Usage
 ```cs
 employeePipeline.Execute(employee.Name);
 ```
@@ -24,7 +24,7 @@ IParallelPipeline<String, String> parallelPipeline = new EmployeeParallelPipelin
                .CompleteRegisteration<string>();
 ```
 
-##Usage
+## Usage
 ```cs
 parallelPipeline.Process<String>(employee.Name);
 await parallelPipeline.CompleteProcessing<string, string>();
