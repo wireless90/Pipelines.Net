@@ -1,7 +1,10 @@
 # Pipelines.Net
 A Simple Pipeline Library for .Net Core
 
+# Pipes & Filters Pattern
+Decompose a task that performs complex processing into a series of separate elements that can be reused. This can improve performance, scalability, and reusability by allowing task elements that perform the processing to be deployed and scaled independently.
 
+# Code Explanation
 A pipeline has an `Input` type and an `Output` type.
 It is declared as `IPipeline<Input, Output>`.
 
